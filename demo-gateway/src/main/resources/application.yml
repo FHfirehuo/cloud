@@ -41,9 +41,6 @@ spring:
   profiles: method_route
 #在上面的配置中，所有的GET类型的请求都会路由转发到配置的uri
 
-spring:
-  profiles:
-    active: path_route
 ---
 spring:
   cloud:
