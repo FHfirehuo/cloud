@@ -17,9 +17,9 @@ public class GeteWayTokenApplication2 {
 //访问http://localhost:8080/api/v1/user/oa/liuyi27
 //转发至	http://192.168.12.33:8083/api/v1/user/oa/liuyi27
 
-	@Bean
-	public TokenFilter tokenFilter() {
-		return new TokenFilter();
-	}
+//	@Bean
+//	public TokenFilter tokenFilter() {
+//		return new TokenFilter();
+//	}
 
 }

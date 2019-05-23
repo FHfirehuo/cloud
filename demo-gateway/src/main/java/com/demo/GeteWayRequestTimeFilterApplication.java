@@ -18,15 +18,15 @@ public class GeteWayRequestTimeFilterApplication {
 	}
 	//访问http://localhost:8080/api/v1/user/oa/liuyi27
 	//转发至	http://192.168.12.33:8083/api/v1/user/oa/liuyi27
-	@Bean
-	public RouteLocator customerRouteLocator(RouteLocatorBuilder builder) {
-		// @formatter:off
-		return builder.routes()
-				.route(r -> r.path("/api/v1/user/**")
-						.filters(f -> f.filter(new RequestTimeFilter()).addResponseHeader("X-Response-Default-Foo",
-								"Default-Bar"))
-						.uri("http://192.168.12.33:8083").order(0).id("customer_filter_router"))
-				.build();
-		// @formatter:on
-	}
+//	@Bean
+//	public RouteLocator customerRouteLocator(RouteLocatorBuilder builder) {
+//		// @formatter:off
+//		return builder.routes()
+//				.route(r -> r.path("/api/v1/user/**")
+//						.filters(f -> f.filter(new RequestTimeFilter()).addResponseHeader("X-Response-Default-Foo",
+//								"Default-Bar"))
+//						.uri("http://192.168.12.33:8083").order(0).id("customer_filter_router"))
+//				.build();
+//		// @formatter:on
+//	}
 }

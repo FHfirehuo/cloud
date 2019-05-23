@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   profiles:
-    active: method_route
+    active: path_route
 
 ---
 spring:
@@ -47,8 +47,8 @@ spring:
     gateway:
       routes:
       - id: path_route
-        uri: http://httpbin.org:80/get
+        uri: http://192.168.12.33:8083
         predicates:
-        - Path=/foo/{segment}
+        - Path=/api/**
   profiles: path_route
 #在上面的配置中，所有的请求路径满足/foo/{segment}的请求将会匹配并被路由，比如/foo/1 、/foo/bar的请求，将会命中匹配，并成功转发。
